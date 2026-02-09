@@ -1,57 +1,38 @@
-# Proyecto de portafolio - Módulo 2
+# 🌤️ App de Clima - Portafolio M4
 
-Desarrollar la primera versión del frontend de una aplicación de clima, aplicando **HTML5 semántico**, **Bootstrap** para estilos y **diseño responsivo**, y **JavaScript** básico para la interacción. El trabajo se versiona en **Git/GitHub** e incluye un **README** descriptivo.
+¡Bienvenido a la **App de Clima**! Este proyecto forma parte de mi proceso de aprendizaje en el desarrollo Frontend, enfocado en la manipulación de datos dinámicos y la creación de interfaces interactivas y funcionales.
+
+## 📝 Descripción
+
+Esta aplicación permite a los usuarios visualizar información meteorológica de distintas ubicaciones de manera rápida y clara. La temática central es la **gestión de datos climáticos**, ofreciendo una experiencia de usuario limpia donde se pueden consultar desde temperaturas actuales hasta proyecciones futuras.
 
 ---
 
-## Aplicación del tiempo
+## 📊 Modelado de Datos
 
-Esta aplicación muestra el tiempo actual en 10 localidades.
-Al hacer click en una de las localidades, te llevará a una vista de detalle mostrando el tiempo actual junto con un pronóstico para la siguiente semana.
+Para que la aplicación funcione correctamente, los datos han sido estructurados de forma lógica utilizando JavaScript:
 
-## Requisitos funcionales
+- **Arreglo de Lugares:** Los datos principales se almacenan en una colección (array) de objetos. Cada objeto representa una ciudad o ubicación específica con sus atributos únicos.
+- **Pronóstico Semanal:** Dentro de cada ubicación, se incluye una estructura de datos que detalla el pronóstico para los próximos días, permitiendo una visualización organizada de la evolución del tiempo.
 
-- Ejemplo de uso de JS 1: Navegación desde card
+---
 
-```js
-cardLinks.forEach(function (link) {
-  link.addEventListener('click', function () {
-    window.location.href = './detalle.html';
-  });
-});
-```
+## 📈 Estadísticas Calculadas
 
-- Ejemplo de uso de JS 2: Modificando clases dependiendo de la ubicación:
+En esta versión, la aplicación no solo muestra datos básicos, sino que también procesa la información para ofrecer métricas útiles, tales como:
 
-```js
-links.forEach(function (link) {
-  if (link.href === window.location.href) {
-    link.classList.add('active');
-  } else {
-    link.classList.remove('active');
-  }
-});
-```
+1.  **Promedio de Temperatura:** Cálculo de la temperatura media basada en el pronóstico semanal.
+2.  **Máximas y Mínimas:** Identificación de los picos de temperatura (día más caluroso y día más frío).
+3.  **Estado Predominante:** Resumen estadístico de las condiciones climáticas más frecuentes (ej. Mayormente soleado).
 
-# Proyecto de portafolio - Módulo 4
+---
 
-## Requisitos técnicos
+## 🚀 Repositorio
 
-### Modelado de datos
+Puedes encontrar el código fuente completo y seguir el desarrollo del proyecto en el siguiente enlace:
 
-- [x] Definir en JavaScript un arreglo de lugares donde cada lugar sea un objeto con al menos:
-- [x] id, nombre, tempActual, estadoActual
-- [x] pronosticoSemanal: arreglo de objetos (cada objeto será un día de la semana) con dia, min, max y estado
+🔗 **[ZagatZ/Portafolio-M4-App-Clima](https://github.com/ZagatZ/Portafolio-M4-App-Clima)**
 
-### Variables, condicionales, ciclos y funciones
+---
 
-- [x] Utilizar variables y constantes para guardar datos intermedios (suma de temperaturas, contadores, etc.).
-- [x] Utilizar ciclos (for, while o similar) para recorrer el pronóstico semanal y:
-  - [x] Calcular mínimo, máximo y promedio:
-  - [x] Contar cuántos días hay de cada tipo de clima.
-- [x] Utilizar condicionales (if, else if, else) para:
-  - [x] Evaluar estados del tiempo (ej.: si hay más días soleados que nublados → “Semana mayormente soleada”).
-  - [x] Generar el resumen textual de la semana.
-- [x] Definir al menos dos funciones:
-  - [x] Una función para buscar y obtener el objeto lugar a partir de un id o nombre.
-  - [x] Una función para calcular estadísticas a partir del pronosticoSemanal de un lugar y devolver un objeto con los resultados.
+_Desarrollado para el Bootcamp Frontend._
